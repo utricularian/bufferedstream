@@ -189,7 +189,7 @@ function flush(stream) {
     }
   }
 
-  if (stream.ended) {
+  if (stream.ended && !stream.paused) {
     end(stream);
     return;
   }
